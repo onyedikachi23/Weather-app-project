@@ -152,6 +152,13 @@ body.night {
 
 /* scrollbar styling */
 
+/* For Firefox */
+/* .forecast-list-wrapper {
+	scrollbar-width: thin;
+	scrollbar-color: hsla(0, 0%, 100%, 0.5) hsla(0, 0%, 100%, 0.15);
+} */
+
+/* For Chrome, Safari, and Edge */
 .forecast-list-wrapper::-webkit-scrollbar {
 	width: 0.5rem;
 	height: 0.5rem;
@@ -168,6 +175,11 @@ body.night {
 	width: 0;
 	height: 0;
 }
+
+/* For IE and Edge Legacy */
+/* .forecast-list-wrapper {
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+} */
 
 /* forecast list */
 
