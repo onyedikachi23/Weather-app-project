@@ -167,7 +167,7 @@ body.night {
 }
 
 .forecast-list-wrapper::-webkit-scrollbar-thumb {
-	background-color: hsla(0, 0%, 100%, 0.8);
+	background-color: hsl(0, 0%, 100%);
 	border-radius: 0.875rem;
 }
 
