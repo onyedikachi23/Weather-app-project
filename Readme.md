@@ -34,7 +34,7 @@ A weather forecast web app to get the weather forecast of your nearby location w
 
 -   semantic HTML5
 -   CSS3
--   JavaScript fetch April
+-   JavaScript fetch API
 -   [OpenWeatherMap API](https://openweathermap.org/api)
 
 ### Code concerns
