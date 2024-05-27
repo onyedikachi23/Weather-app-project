@@ -10,7 +10,6 @@ const forecastDescriptionEls = document.querySelectorAll(
 
 // set night or day to the body class
 toggleDayNightMode();
-console.log("time");
 
 // add submit event listener to the search form
 inputFormEl.addEventListener("submit", processFormSubmit);
@@ -31,12 +30,10 @@ function toggleDayNightMode() {
 
 	// check time of day and set values based on that
 	if (currentHours >= 6 && currentHours < 18) {
-		console.log(`day time is ${currentHours}`);
 		// we're in day time
 		bodyClass = "";
 		faviconLinkEl.href = "./images/favicon.png";
 	} else {
-		console.log(`night time is ${currentHours}`);
 		// we're in night time
 		bodyClass = "night";
 		faviconLinkEl.href = "./images/favicon-night.png";
