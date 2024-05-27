@@ -10,16 +10,37 @@ const forecastDescriptionEls = document.querySelectorAll(
 
 // set night or day to the body class
 toggleDayNightMode();
+console.log("time");
 
 // add submit event listener to the search form
 inputFormEl.addEventListener("submit", processFormSubmit);
 
 /* functions */
-// set body class to night or day depending on user local time
+// set Day/Night values according to user local time
 function toggleDayNightMode() {
 	// get current hours in 24 hrs format from local time
 	const currentHours = new Date().getHours();
-	const bodyClass = currentHours >= 6 && currentHours < 18 ? "" : "night";
+	let bodyClass;
+	let faviconLinkEl = document.querySelector("link[rel~='icon']");
+	// if no favicon link exists, create one
+	if (!Boolean(faviconLinkEl)) {
+		faviconLinkEl = document.createElement("link");
+		faviconLinkEl.rel = "icon";
+		document.head.appendChild(faviconLinkEl);
+	}
+
+	// check time of day and set values based on that
+	if (currentHours >= 6 && currentHours < 18) {
+		console.log(`day time is ${currentHours}`);
+		// we're in day time
+		bodyClass = "";
+		faviconLinkEl.href = "./images/favicon.png";
+	} else {
+		console.log(`night time is ${currentHours}`);
+		// we're in night time
+		bodyClass = "night";
+		faviconLinkEl.href = "./images/favicon-night.png";
+	}
 	document.body.className = bodyClass;
 }
 
