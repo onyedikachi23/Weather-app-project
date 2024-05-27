@@ -39,7 +39,7 @@ A weather forecast web app to get the weather forecast of your nearby location w
 
 ### Code concerns
 
-You might notice my OpenWeatherMap API token key is exposed in the JavaScript. As a security concern, this might not be recommended. Actually, this is a demo project and that token key being exposed doesn't really matter as this isn't an official build.
+You might notice my OpenWeatherMap API token key is exposed in the JavaScript code. As a security concern, this might not be recommended. Actually, this is a demo project and that token key being exposed doesn't really matter as this isn't an official build.
 
 ## Further development
 
